@@ -8,3 +8,11 @@ console.log(Merged1)
 
 const Merge2 = {...Target,...source}
 console.log(Merge2)
+
+// If we want to acceses use key multiple time 
+
+const{a} = Target 
+console.log(a)
+
+const{b:second_key} = Target
+console.log(second_key)
