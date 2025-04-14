@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Parent">
+        <div class="child">Captain America</div>
+        <div class="child">Iron Man</div>
+        <div class="child">Thor</div>
+        <div class="child">Captain Marvel</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.Parent')
+    console.log(parent.children[0].innerText)  // .children gives HTMLCollection
+    console.log(parent.firstElementChild.innerText) // Gives first element
+
+    const Child = document.querySelector('.child')
+    console.log(Child.parentElement)   // Return Parent Element
+    
+    const child1st = parent.firstElementChild
+    console.log(child1st.nextElementSibling.innerText)
+    
+    console.log(parent.childNodes)  // it also count enter, dives 
+</script>
+</html>
