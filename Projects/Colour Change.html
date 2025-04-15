@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      border: 1px solid black;
+    }
+
+    .box1 { background-color: #FF6B6B; }
+    .box2 { background-color: #6BCB77; }
+    .box3 { background-color: #4D96FF; }
+    .box4 { background-color: #FFD93D; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1" id="#FF6B6B"></div>
+    <div class="box box2" id="#6BCB77"></div>
+    <div class="box box3" id="#4D96FF"></div>
+    <div class="box box4" id="#FFD93D"></div>
+  </div>
+</body>
+<script>
+    const boxes = document.querySelectorAll('.box')
+    const body = document.querySelector('body')
+    
+    boxes.forEach((box) => {
+        box.addEventListener('mouseover', (e) => {
+            if(e.target.id === '#FF6B6B') {
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id === '#6BCB77') {
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id === '#4D96FF') {
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id === '#FFD93D') {
+                body.style.backgroundColor = e.target.id
+            }
+            
+        });
+        
+        
+    });
+</script>
+</html>
