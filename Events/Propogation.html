@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Propagation</title>
+  <style>
+    #outer {
+      padding: 40px;
+      background-color: #a2d2ff;
+    }
+
+    #middle {
+      padding: 30px;
+      background-color: #bde0fe;
+    }
+
+    #inner {
+      padding: 20px;
+      background-color: #ffffff;
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="outer">
+    Outer
+    <div id="middle">
+      Middle
+      <div id="inner">
+        Inner (Click Me)
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+
+    // ------------------------ bubbling phase (by default false) --------------------------------
+    document.getElementById('outer').addEventListener("click" , (e) => {
+        console.log("Clicked on outer")
+    })
+
+    document.getElementById('inner').addEventListener("click" , (e) => {
+        console.log("Clicked on inner")
+    })
+
+
+    // --------------------------- capturing phase ------------------------------------
+    document.getElementById('outer').addEventListener("click" , (e) => {
+        console.log("Clicked on outer")
+    }, true)
+
+    document.getElementById('inner').addEventListener("click" , (e) => {
+        console.log("Clicked on inner")
+    }, true)
+    
+</script>
+</html>
