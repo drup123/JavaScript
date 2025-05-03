@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Event Coordinates</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 300px;
+      border: 2px solid #333;
+      margin: 30px auto;
+      position: relative;
+      background-color: #f0f0f0;
+      text-align: center;
+      line-height: 300px;
+      font-weight: bold;
+    }
+    #output {
+      text-align: center;
+      margin-top: 20px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box1" class="box">Click inside Box 1</div>
+  <div id="box2" class="box">Click inside Box 2</div>
+  <div id="output"></div>
+
+</body>
+
+<script>
+      document.getElementById('box1').addEventListener("click" , (e) => {
+            console.log(e.clientX, e.clientY)
+      })
+      
+      document.getElementById('box2').addEventListener("click" , (e) => {
+            console.log(e.screenX , e.screenY)
+      })
+      
+</script>
+
+</html>
+
+         
+
