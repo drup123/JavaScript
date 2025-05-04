@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Event Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .box {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      font-size: 24px;
+      background-color: #f0f0f0;
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Press any key</h1>
+  <div class="box" id="key">Key: -</div>
+  <div class="box" id="keyCode">KeyCode: -</div>
+  <div class="box" id="code">Code: -</div>
+</body>
+<script>
+    const key = document.querySelector("#key")
+    const keyCode = document.querySelector("#keyCode")
+    const Code = document.querySelector("#code")
+    window.addEventListener("keydown" , (e) => {
+        key.innerHTML = ` Key :- ${e.key === ' ' ? 'space' : e.key}`
+        keyCode.innerHTML = `KeyCode :- ${ e.keyCode}`
+        Code.innerHTML = `Code :- ${e.code}`
+        
+    })
+</script>
+</html>
