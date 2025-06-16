@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <button id="green">Green</button>
+    <button id="pink">Pink</button>
+</body>
+<script>
+    function clickHandler(color) {
+        return function Setcolor() {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('green').onclick = clickHandler('green')
+    document.getElementById('pink').onclick = clickHandler('pink')
+</script>
+</html>
+
+<!-- Closure
+ A closure is a function that remembers its outer (lexical) environment, even after the outer function has finished executing.
+
+So, closures are functions + the scope they were created in. -->
